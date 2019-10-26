@@ -1,0 +1,119 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+        "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<link rel="stylesheet" href="zphoto.css" media="all">
+<title>PHOTOGRAHY</title>
+</head>
+<body>
+
+<!-- hiroyuki edit 2004.6.26 start -->
+<center>
+	<h1>PHOTOGRAHY</h1>
+</center>
+<!-- hiroyuki edit 2004.6.26 end -->
+
+
+<p class="flash">
+ <object 
+  classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"
+  codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=5,0,0,0"
+  id="zphoto" width="750"  height="500">
+   <param name="movie" value="zphoto.swf">
+   <param name="quality" value="high">
+   <param name="play" value="true">
+   <param name="menu" value="true">
+   <param name="loop" value="false">
+   <embed name="zphoto" 
+   	  src="zphoto.swf" 
+	  width="750" height="500"
+	  pluginspage="http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash"
+	  type="application/x-shockwave-flash">
+   </embed>
+ </object>
+</p>
+
+<hr>
+
+<!-- hiroyuki add 2004.6.26 start -->
+<center>
+	<a href="../tate02/index.html">＜＜BACK</a>
+</center>
+<center><a href="http://homepage2.nifty.com/erukahon/">HOME</a></center>
+<!-- hiroyuki add 2004.6.26 end -->
+
+<p>
+<script language="JavaScript">
+<!--
+var InternetExplorer = navigator.appName.indexOf("Microsoft") != -1;
+
+function zoom (percentage) {
+  var mc = InternetExplorer ? window.zphoto : window.document.zphoto;
+  mc.Zoom(percentage);
+}
+
+
+/*
+ * 2.0 zoom in with five frames. 
+ */
+i = 0;
+function zoom_in () {
+  if (i < 5) {
+	zoom(87.06);
+        setTimeout("zoom_in()", 1);
+        i += 1;
+  } else {
+     i = 0;
+  }
+}
+
+/*
+ * 2.0 zoom out with five frames. 
+ */
+j = 0;
+function zoom_out () {
+  if (j < 5) {
+	zoom(114.87);
+        setTimeout("zoom_out()", 1);
+        j += 1;
+  } else {
+     j = 0;
+  }
+}
+
+function ie_on_win32 () {
+    if (navigator.appName.indexOf("Microsoft") != -1 &&
+        navigator.platform == "Win32")
+    {
+	return true;
+    } else {
+	return false;
+    }
+}
+
+if (ie_on_win32()) {
+    document.write('<a href="JavaScript:onClick=zoom_in();">拡大</a>');
+    document.write(' ');
+    document.write('<a href="JavaScript:onClick=zoom_out();">縮小</a>');
+    document.write(' ');
+    document.write('<a href="JavaScript:onClick=zoom(0);">元に戻す</a>');
+} else {
+    document.write('アルバム全体をズームするときは上の表示領域で右クリックをお試しください。');
+}
+//-->
+</script>
+<a href="zphoto.swf">全画面表示</a>
+<a href="noflash.html">Flashなし版</a>
+<!--
+<a href="zphoto.zip">zipファイル</a>
+-->
+</p>
+
+<p class="footer">
+Photo album created on Sun Jun 27 00:25:32 2004
+
+with <a href="http://namazu.org/~satoru/zphoto/">zphoto</a>.
+</p>
+ 
+</body>
+</html>
